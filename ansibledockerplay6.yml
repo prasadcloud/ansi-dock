@@ -1,0 +1,9 @@
+---
+- name: Download docker image
+  hosts: all
+  tasks:
+    - name: Download image
+      docker_image: 
+       name: tomee
+       source: pull
+...

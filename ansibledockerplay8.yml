@@ -1,0 +1,14 @@
+---
+- name: Upload docker custom image
+  hosts: 172.31.0.32
+  tasks:
+    - name: Login to docker hub
+      docker_login:
+        username: prasadcloud
+        password: babaji_81
+    - name: Upload the docker image
+      docker_image:
+        name: prasadcloud/nginx86
+        push: true
+        source: local
+...

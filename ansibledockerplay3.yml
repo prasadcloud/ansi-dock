@@ -1,0 +1,10 @@
+---
+- name: Create multiple nginx containers
+  hosts: all
+  tasks:
+    - name: Create ten nginx containers
+      docker_container:
+        name: "mynginx{{item}}"
+        image: nginx
+      with_sequence: count=10
+...
