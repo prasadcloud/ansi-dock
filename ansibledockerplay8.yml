@@ -5,7 +5,7 @@
     - name: Login to docker hub
       docker_login:
         username: prasadcloud
-        password: babaji_81
+        password: test123
     - name: Upload the docker image
       docker_image:
         name: prasadcloud/nginx86
